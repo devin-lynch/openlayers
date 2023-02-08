@@ -2,13 +2,14 @@ import './style.css';
 import {Map, View} from 'ol';
 import TileLayer from 'ol/layer/Tile';
 import OSM from 'ol/source/OSM';
+import Stamen from 'ol/source/Stamen.js'
 import { fromLonLat } from 'ol/proj';
 
 const map = new Map({
   target: 'map',
   layers: [
     new TileLayer({
-      source: new OSM()
+      source: new Stamen({layer: 'watercolor'})
     })
   ],
   view: new View({
